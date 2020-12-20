@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "69174458195",
+    "project_id": "foodforgood-d557f",
+    "storage_bucket": "foodforgood-d557f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:69174458195:android:6c305efdacff45738513a6",
+        "android_client_info": {
+          "package_name": "com.foodforgood"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "69174458195-pmd5eoksvndp9b3qj0pgldl323ckatro.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.foodforgood",
+            "certificate_hash": "c3f17ed83aaa014b0e72b736b32ab3fbb5559a67"
+          }
+        },
+        {
+          "client_id": "69174458195-lcfq1l6q4446c24jt73n6j9hglon1uaa.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBzDqMd3p1EMfwMFTFzUgYjrQQDV7VMVBI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "69174458195-lcfq1l6q4446c24jt73n6j9hglon1uaa.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
