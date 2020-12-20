@@ -23,8 +23,7 @@ const HomeScreen = ({navigation}) => {
   const[city,setCity] = useState("San Diego");
   const[zip,setZip] = useState("92115");
   const getRestaurants = () =>{
-    const usStates = require('../assets/USState.json');
-    console.log('clicked on restaurants');    
+    const usStates = require('../assets/USState.json');    
     const searchParams = {};
     searchParams.name = restaurantName;
     searchParams.state = stateCode.toUpperCase();

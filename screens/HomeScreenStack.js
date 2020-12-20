@@ -10,7 +10,7 @@ import HomeScreen from './HomeScreen';
 import ProfileScreen from './ProfileScreen';
 import EditProfileScreen from './EditProfileScreen';
 
-import {useTheme, Avatar} from 'react-native-paper';
+import {useTheme} from 'react-native-paper';
 import {View} from 'react-native-animatable';
 import CardListScreen from './CardListScreen';
 import CardItemDetails from './CardItemDetails';

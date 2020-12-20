@@ -19,9 +19,6 @@ import { useTheme } from 'react-native-paper';
 
 import { AuthContext } from '../components/context';
 import auth from '@react-native-firebase/auth';
-import Users from '../model/users';
-import firebasedb from '../database/firebasedb';
-import db from '../database/firebasedb';
 
 
 
@@ -98,9 +95,7 @@ const SignInScreen = ({navigation}) => {
         }
     }
 
-     const loginHandle = async (email, password) => {
-             // alert(email+password);
-     //  const foundUser = async () => {
+     const loginHandle = async (email, password) => {             
        try {
          
     let response = await auth().signInWithEmailAndPassword(email, password);
@@ -188,8 +183,7 @@ const SignInScreen = ({navigation}) => {
                 />
                 <TextInput 
                     placeholder="Your Password"
-                    placeholderTextColor="#666666"
-                   // secureTextEntry={data.secureTextEntry ? true : false}
+                    placeholderTextColor="#666666"                   
                     style={[styles.textInput, {
                         color: colors.text
                     }]}

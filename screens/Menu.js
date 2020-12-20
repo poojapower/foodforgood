@@ -17,8 +17,7 @@ const Menu = ({menuVal,navigation}) => {
       setTotalPrice(newTotalPrice);      
   },[cartItemsJSON]);
 
-  const goToCheckout = () => {
-    console.log('totalPrice--->>>',totalPrice)
+  const goToCheckout = () => {    
     if(totalPrice == 0){
       alert('Please add some items to your cart');
     }else{

@@ -21,10 +21,12 @@ RedId - **824646024**
 
 
 ## Special Instructions
-While checking out and on the payment screen you would be asked to add a valid card number. Please enter a valid card or use below details for testing
+While checking out, on the payment screen you would be asked to add a valid card number. Please enter a valid card or use below details for testing
 Card No. 6011111111111117
 Expiry Date : 06/25
 CVV: 601
+
+You can also try out other credit card numbers from [here](https://www.paypalobjects.com/en_AU/vhelp/paypalmanager_help/credit_card_numbers.htm).
 
 ## Third party libraries
 To get the restaurant info we are consuming following apis

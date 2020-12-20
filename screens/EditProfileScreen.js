@@ -4,8 +4,7 @@ import auth from '@react-native-firebase/auth';
 import {
   View,
   Text,
-  TouchableOpacity,
-  ImageBackground,
+  TouchableOpacity,  
   TextInput,
   StyleSheet,
   Alert
@@ -13,15 +12,9 @@ import {
 
 import {useTheme} from 'react-native-paper';
 
-import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
-import Feather from 'react-native-vector-icons/Feather';
 
-import BottomSheet from 'reanimated-bottom-sheet';
 import Animated from 'react-native-reanimated';
-
-import ImagePicker from 'react-native-image-crop-picker';
-import firebasedb from '../database/firebasedb';
 
 const EditProfileScreen = (props) => {
   const [image, setImage] = useState('https://api.adorable.io/avatars/80/abott@adorable.png');
@@ -35,8 +28,7 @@ const EditProfileScreen = (props) => {
 
    const [user, setUser] = useState(initialState);
    const getUserDetails = async (id) => {
-    const user1= auth().currentUser;
-    console.log("Current user"+user1.displayName,user1.email,user1.phoneNumber)
+    const user1= auth().currentUser;    
     setUser({ ...user, name:user1.displayName,email:user1.email,phone:user1.phoneNumber});
      };
   
@@ -49,14 +41,12 @@ const EditProfileScreen = (props) => {
   };
 
 const updateUser = async () => {
-  setUser(initialState);
-  console.log("updated user"+user.phone+user.name);
+  setUser(initialState);  
    const update = {
    displayName:user.name,email:user.email,phoneNumber:user.phone,
    };
    update;
-  await auth().currentUser.updateProfile(update);
- // await auth().currentUser.updatePhoneNumber(user.phone);
+  await auth().currentUser.updateProfile(update); 
       Alert.alert("Success ✅", "Updated profile successfully")
   props.navigation.navigate("Home");
   };
@@ -112,24 +102,7 @@ const updateUser = async () => {
               },
             ]}
           />
-        </View>
-        {/* <View style={styles.action}>
-          <Feather name="phone" color={colors.text} size={20} />
-          <Text
-            placeholder="Phone"
-            placeholderTextColor="#666666"
-            value={user.phone}
-            keyboardType="number-pad"
-            autoCorrect={false}
-             onChangeText={(value) => handleTextChange(value,'phone')}
-            style={[
-              styles.textInput,
-              {
-                color: colors.text,
-              },
-            ]}
-          />
-        </View> */}
+        </View>        
         <View style={styles.action}>
           <FontAwesome name="envelope-o" color={colors.text} size={20} />
           <Text
@@ -174,21 +147,14 @@ const styles = StyleSheet.create({
   panel: {
     padding: 20,
     backgroundColor: '#FFFFFF',
-    paddingTop: 20,
-    // borderTopLeftRadius: 20,
-    // borderTopRightRadius: 20,
-    // shadowColor: '#000000',
-    // shadowOffset: {width: 0, height: 0},
-    // shadowRadius: 5,
-    // shadowOpacity: 0.4,
+    paddingTop: 20,    
   },
   header: {
     backgroundColor: '#FFFFFF',
     shadowColor: '#333333',
     shadowOffset: {width: -1, height: -3},
     shadowRadius: 2,
-    shadowOpacity: 0.4,
-    // elevation: 5,
+    shadowOpacity: 0.4,    
     paddingTop: 20,
     borderTopLeftRadius: 20,
     borderTopRightRadius: 20,

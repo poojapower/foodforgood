@@ -33,8 +33,7 @@ const initialState = {
   const [user, setUser] = useState(initialState);
   const [loading, setLoading] = useState(true);
    const getUserDetails = async (id) => {
-    const user1= auth().currentUser;
-   //  console.log("name"+user1.password);
+    const user1= auth().currentUser;   
     setUser({ ...user, name:user1.displayName,email:user1.email});
    };
     const paperTheme = useTheme();

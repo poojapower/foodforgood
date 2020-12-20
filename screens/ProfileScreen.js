@@ -2,9 +2,7 @@
 
 import React,{useEffect,useState} from 'react';
 import auth from '@react-native-firebase/auth';
-import firebase from "firebase";
 import "firebase/firestore";
-//import firestore from "firebase/firestore";
 import {View, SafeAreaView, StyleSheet} from 'react-native';
 import {
   Avatar,
@@ -33,16 +31,14 @@ const ProfileScreen = () => {
    const [order, setOrder] = useState(initialState);
   const [loading, setLoading] = useState(true);
    const getUserDetails = async (id) => {
-    const user1= auth().currentUser;
-   //  console.log("name"+user1.password);
+    const user1= auth().currentUser;   
     setUser({ ...user, name:user1.displayName,email:user1.email,phone:user1.phoneNumber});
    };
 
   const myCustomShare = async() => {
     const shareOptions = {
       message: 'Order your next meal from FoodFinder App. I\'ve already ordered more than 10 meals on it.',
-      url: files.appLogo,
-      // urls: [files.image1, files.image2]
+      url: files.appLogo,      
     }
 
     try {
@@ -53,27 +49,11 @@ const ProfileScreen = () => {
     }
    
   };
-
-  const componentMount= async()=>{
- //   console.log(firebasedb.db.collection('users').get());
- 
-    firebasedb.db
-  .collection("orders")
-  .get()
-  .then((documentSnapshot ) => {
-    console.log(' orders exist: ', documentSnapshot.exists);
-
-    if (documentSnapshot.exists) {
-      console.log('User data: ', documentSnapshot.data());
-    }
-  });
-
-  };
+  
 
   
    useEffect(() => {
-    getUserDetails('');
-    componentMount();
+    getUserDetails('');    
   },[]);
 
   return (
