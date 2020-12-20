@@ -11,13 +11,20 @@ RedId - **824646024**
 ## Flow for Customer :
 	1. USer can sign up and sign in using just their id and password
 	2. User can update their name on edit profile option
-  default username: 
-  admin@gmail.com
-  password: 123456
+  Existing Users : 
+  **username - nativereact.sdsu@gmail.com**  
+  **password - Test@12345**
+  
+  **username: admin@gmail.com**
+  **password: 123456**
+
+
 
 ## Special Instructions
-
-
+While checking out and on the payment screen you would be asked to add a valid card number. Please enter a valid card or use below details for testing
+Card No. 6011111111111117
+Expiry Date : 06/25
+CVV: 601
 
 ## Third party libraries
 To get the restaurant info we are consuming following apis
@@ -27,7 +34,16 @@ To get the restaurant info we are consuming following apis
 ## Credentials for third party apis
 You can check these apis with following credentials  
 **username - nativereact.sdsu@gmail.com**  
-**password - Test@12345**  
+**password - Test@12345**
+
+
+## Credential for Firebase   
+1. [foodforgood](https://console.firebase.google.com/)
+**username - nativereact.sdsu@gmail.com**  
+**password - Test@12345**
+
+
+
 Same credentials can be used to access Gmail,Documenu and Yelp Apis.
 
 ## Known issues / Limitations
@@ -38,7 +54,7 @@ Same credentials can be used to access Gmail,Documenu and Yelp Apis.
     So while searching the restaurants based on the US state they are situated in, you have to use state code and not the state string.
       e.g. You have to use CA instead of California.  The states code list can be found in [USState.json](assets/USState.json) under assets folder.
 4. Since we have opted for free plan for the [Documenu api](https://documenu.com/) we get to fire **500 api requests per account**. So we haven't implemented the pagination functionality for restaurant search. You can check the api consumption count at [Documenu Dashboard](https://documenu.com/dashboard) using the credentials mentioned above.
-5. User orders are updated in teh database but unable to view it on the screen.
+5. User orders are updated in the database but unable to view it on the screen.Also there is known to be a latency issue with firebase which would be misleading with the data not entered.
 
 ## Screens
 1. ![1](/assets/Pic_1.jpg)
