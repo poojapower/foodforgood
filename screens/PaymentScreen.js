@@ -8,30 +8,28 @@ import auth from '@react-native-firebase/auth';
 const Payment = ({navigation,route}) => {  
     const [cardDetails,setCardDetails] = useState({})    
     const placeOrder = () => {        
-      //  if(cardDetails.valid){
-
-             const user1 = auth().currentUser;
-             console.log(route.params.totalPrice);
-         let response =   firebasedb.db.collection("orders").add({
-         orders:{'orders':route.params.orderJSON,'user':user1.email,'totalPrice':route.params.totalPrice+""},
-         });
-        if(response) {
-         Alert.alert(
+      if(cardDetails.valid){
+          const user1 = auth().currentUser;
+          console.log(route.params.totalPrice);
+          let  response =   firebasedb.db.collection("orders").add({
+            orders:{'orders':route.params.orderJSON,'user':user1.email,'totalPrice':route.params.totalPrice+""},
+          });
+          if(response) {
+            Alert.alert(
             "Food For Good",
-            "Thank you for your order. Your food will be at your doorstep shortly.",
+              "Thank you for your order. Your food will be at your doorstep shortly.",
             [              
               { text: "OK", onPress: () => navigation.navigate('Home')}
             ],            
           );          
-         }else{
-           alert('Something went wrong');
-       }
-         
-        
+        }
+      }else{
+        alert('Please valid card details');
+      }                              
     }
   return(
     <View style={styles.container}>      
-     {/* <CreditCardInput onChange={(value) => {setCardDetails(value)}} />       */}
+     { <CreditCardInput onChange={(value) => {setCardDetails(value)}} />       }
        <Portal>
           <FAB style={styles.fab} small label="Place order" onPress={() => placeOrder()}/>
       </Portal>

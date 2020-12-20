@@ -19,9 +19,9 @@ const HomeScreen = ({navigation}) => {
   const {colors} = useTheme();
   const[showRefineMenu,setShowRefineMenu] = useState(false);
   const[restaurantName,setRestaurantName] = useState("");
-  const[stateCode,setStateCode] = useState("");
-  const[city,setCity] = useState("");
-  const[zip,setZip] = useState("");
+  const[stateCode,setStateCode] = useState("CA");
+  const[city,setCity] = useState("San Diego");
+  const[zip,setZip] = useState("92115");
   const getRestaurants = () =>{
     const usStates = require('../assets/USState.json');
     console.log('clicked on restaurants');    
